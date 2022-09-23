@@ -15,9 +15,7 @@ app.use(cors());
 app.use("/api/register", register)
 app.use("/api/login",login)
 app.use('/api/students', studentsRoute)
-app.get('/',(req,res)=>{
-    res.status(201).send("Hello app is running steady");
-})
+
 
 const port = process.env.PORT || 5000;
 const uri = process.env.DB_URI;
