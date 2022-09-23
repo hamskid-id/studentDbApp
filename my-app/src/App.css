@@ -99,6 +99,9 @@ justify-content: end;
     width: 100%;
     margin: 0 auto;
   }
+  .login-wrapper,.register-wrapper{
+    width:100%;
+}
   .create-container .display-5, .viewAll-container .display-5,.viewAll-wrapper button {
     font-size: 15px;
 }
