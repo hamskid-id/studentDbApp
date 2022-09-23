@@ -1,0 +1,111 @@
+*{
+  padding:3px;
+}
+body{
+  font-family: 'Recursive', sans-serif;
+}
+.App {
+  text-align: center;
+}
+.login-wrapper,.register-wrapper{
+  width:40%;
+}
+.navlink-wrapper{
+justify-content: end;
+}
+
+.data-wrapper{
+  width:fit-content;
+}
+.create-wrapper,.viewAll-wrapper{
+    width:50%;
+    margin:0 auto;
+}
+.create-container{
+  padding-bottom: 10rem;
+}
+.side-img{
+  height:100%;
+}
+.create-container .display-5,.viewAll-container .display-5{
+  font-size: 28px;
+  font-weight:500!important;
+}
+.create-container .display-4{
+  font-size: 20px;
+  font-weight:500!important;
+}
+.create-container input{
+  margin:7px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.sub-text{
+  font-size: 25px;
+  width:75%;
+}
+.display-3{
+  font-weight: 500!important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.nav-inner1-fs-5{
+  font-size:1.2rem;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .nav-inner1{
+    justify-content: space-between;
+  }
+  .nav-inner1-fs-5{
+    font-size: 13px;
+  }
+  .sub-text{
+    width:100%;
+  }
+  .data-btn{
+      font-size: 12px;
+      padding: 8px;
+  }
+  .create-wrapper, .viewAll-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .create-container .display-5, .viewAll-container .display-5,.viewAll-wrapper button {
+    font-size: 15px;
+}
+.create-container label, .create-container input{
+  font-size: 14px;
+}
+.viewAll-wrapper input,.viewAll-wrapper button{
+  margin-bottom: 5px;
+}
+}
