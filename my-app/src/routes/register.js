@@ -1,9 +1,11 @@
 import React,{useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../store/authSlice";
 export const RegisterUser =()=>{
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const auth = useSelector((state)=>state.auth);
     const [user, setUser] = useState({
         name:"",
@@ -14,7 +16,7 @@ export const RegisterUser =()=>{
         e.preventDefault();
         dispatch(registerUser(user));
         if(auth.registerStatus === "success"){
-            window.location.replace('/login');
+            navigate('/');
         }
     }
     return(
