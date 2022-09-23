@@ -7,7 +7,7 @@ import jwtDecode from 'jwt-decode'
 export const studentsFetch = createAsyncThunk(
     "students/studentsFetch",
     async()=>{
-       const response = await axios.get("https://vast-shore-18090.herokuapp.com/api/students");
+       const response = await axios.get(" https://aqueous-earth-86397.herokuapp.com/api/students");
        return response?.data;
     }
 )
@@ -50,7 +50,7 @@ const students_Slice = createSlice({
     reducers:{
         deleteStudent(state,action){
             const studentId = action.payload._id;
-            axios.delete(`https://vast-shore-18090.herokuapp.com/api/students/${studentId}`);
+            axios.delete(` https://aqueous-earth-86397.herokuapp.com/api/students/${studentId}`);
                 
         },
         createError(state,action){

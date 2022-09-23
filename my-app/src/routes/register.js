@@ -16,7 +16,7 @@ export const RegisterUser =()=>{
         e.preventDefault();
         dispatch(registerUser(user));
         if(auth.registerStatus === "success"){
-            navigate('/');
+            navigate('/login');
         }
     }
     return(

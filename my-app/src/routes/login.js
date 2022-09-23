@@ -15,7 +15,7 @@ export const LogInPage =()=>{
         e.preventDefault();
         dispatch(LogInUser(user));
         if(auth._id){
-            navigate("/");
+            navigate(" https://aqueous-earth-86397.herokuapp.com");
         }
     }
     return(
