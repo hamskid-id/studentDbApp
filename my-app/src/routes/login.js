@@ -1,12 +1,11 @@
 import {useState} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { LogInUser } from '../store/authSlice';
 
 export const LogInPage =()=>{
     const dispatch = useDispatch();
     const auth = useSelector((state)=>state.auth);
-    const navigate = useNavigate();
     const [user, setUser] = useState({
         email:"",
         password:""
@@ -15,7 +14,7 @@ export const LogInPage =()=>{
         e.preventDefault();
         dispatch(LogInUser(user));
         if(auth._id){
-            navigate(" https://aqueous-earth-86397.herokuapp.com");
+           window.location.replace("/");
         }
     }
     return(

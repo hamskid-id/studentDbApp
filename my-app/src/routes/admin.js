@@ -36,7 +36,7 @@ export const AdminPage =()=>{
                 <div className=" col-md-7 col-sm-12 ">
                             <h1 className="text-center display-3 fw-bold mt-5">Manage Your Student Data Base  With Ease</h1>
                             <p className="text-center sub-text m-auto nav-inner1-fs-5">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</p>
-                            <div className="m-auto data-wrapper my-3">
+                            <div className="m-auto data-wrapper my-3 text-center">
                             <Link to="/createData" className="btn btn-success btn-lg data-btn me-1 mb-2">Start creating for free</Link>
                             <Link to="/getData" className="btn btn-success btn-lg data-btn mb-2">Get your data</Link>
                             </div>

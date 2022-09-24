@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { studentsActions, studentsFetch } from "../store/studentSlice";
@@ -17,7 +17,9 @@ export const GetData =()=>{
       dispatch(studentsFetch(null));
    }
 
-  
+  useEffect(()=>{
+    dispatch(studentsFetch(null));
+  },[dispatch,studentsFetch])
    const handleSubmit=(e)=>{
         e.preventDefault();
         const studentQuery = students.filter(student=>student.fullname.toLowerCase().includes(e.target.search.value.toLowerCase()));
@@ -45,7 +47,7 @@ export const GetData =()=>{
                     </div>
                 </nav>
                 {
-                    students.length>0?
+                    students.length!==0?
                         <div className="table-responsive">
                             <table className="table table-striped table-hover">
                                 <thead>

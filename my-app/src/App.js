@@ -1,7 +1,7 @@
 import './App.css';
 import { LogInPage } from './routes/login';
 import { RegisterUser } from './routes/register';
-import { HashRouter as Router, Routes, Route, } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import { AdminPage } from './routes/admin';
 import { CreateData } from './routes/create';
 import { GetData } from './routes/getdata';

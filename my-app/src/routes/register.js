@@ -1,24 +1,25 @@
 import React,{useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import { useNavigate } from "react-router-dom";
 import { registerUser } from "../store/authSlice";
 export const RegisterUser =()=>{
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const auth = useSelector((state)=>state.auth);
     const [user, setUser] = useState({
         name:"",
         email:"",
         password:""
     });
+    console.log(auth.registerStatus);
+
     const handleSubmit=(e)=>{
         e.preventDefault();
         dispatch(registerUser(user));
-        if(auth.registerStatus === "success"){
-            navigate('/login');
+        if(auth._id){
+            window.location.replace('/login');
         }
     }
+
     return(
         <div className="container">
             <form className="register-wrapper m-auto" onSubmit={handleSubmit}>
